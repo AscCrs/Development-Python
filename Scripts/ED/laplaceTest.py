@@ -4,10 +4,13 @@ import matplotlib.pyplot as plt
 
 def laplace_inverse(F, a, b, N):
     # Definición de los pesos y nodos de la cuadratura de Gauss
+    # x son los nodos 
+    # w los pesos que tendran en un orden de N
     x, w = np.polynomial.legendre.leggauss(N)
 
     # Cálculo de la integral
-    integral = 0
+    integral = 0 # Esta variable acumula la contribución de cada uno de los nodos
+
     for i in range(N):
         integral += w[i] * F((b - a) / 2 * x[i] + (a + b) / 2)
     
