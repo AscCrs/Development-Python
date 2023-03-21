@@ -21,7 +21,7 @@ def laplace_inverse(F, a, b, N):
     print("El valor de la integral es:", integral)
     
     # Crear un vector de valores x para graficar la función
-    x_vals = np.linspace(a, b, 1000)
+    x_vals = np.linspace(a, b, 500)
     
     # Evaluar la función F en los valores x
     y_vals = [F(x) for x in x_vals]
