@@ -14,9 +14,8 @@ from numpy import exp
 # tolerance: la tolerancia para la precisión
 #
 # outProcess: una bandera; colóquelo en valores no nulos para obtener los resultados intermedios.
-
-
 # Se utiliza el metodo de cuadratura de Gauss-Kronrod de orden 15
+
 def inverseLaplace(F, t, x, outProcess=0, tolerance=1e-8):
     lSegm = 5.0 / t  # Segmentos inciales de integracion
     # Se definen los limites de la integral
@@ -52,10 +51,7 @@ def inverseLaplace(F, t, x, outProcess=0, tolerance=1e-8):
 
     return actRes
 
-
-######### Graficando la inversa numérica
 # Graficando los puntos de datos que se calculan analíticamente
-
 if __name__ == "__main__":
     s = sp.symbols("s")
     f_str = input("Ingrese la función de la transformada de Laplace (como cadena de caracteres): ")
