@@ -54,13 +54,14 @@ def inverseLaplace(F, t, x, outProcess=0, tolerance=1e-8):
 # Graficando los puntos de datos que se calculan analíticamente
 if __name__ == "__main__":
     s = sp.symbols("s")
-    f_str = input("Ingrese la función de la transformada de Laplace (como cadena de caracteres): ")
-    f_str = 1 / (s**2 + 1)
+    t = sp.symbols("t")
+    #f_str = input("Ingrese la función de la transformada de Laplace (como cadena de caracteres): ")
+    f_str = t * sp.exp(-10 * t)
 
     # Ingreso de los parámetros
-    x0 = float(input("Ingrese el valor del inicio de tiempo: "))
-    xf = float(input("Ingrese el valor del limite de tiempo: "))
-    p = float(input("Ingrese el tamaño de cada paso: "))
+    #x0 = float(input("Ingrese el valor del inicio de tiempo: "))
+    #xf = float(input("Ingrese el valor del limite de tiempo: "))
+    #p = float(input("Ingrese el tamaño de cada paso: "))
     x0 = 0.2
     xf = 3
     p = 0.2
